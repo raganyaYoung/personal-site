@@ -1,0 +1,87 @@
+@charset 'UTF-8'
+
+.medias-mobile {margin-bottom: 50px;}
+.medias-mobile .title {margin-bottom: 45px;}
+.medias-mobile .each-work{
+  position: relative;
+  padding-left: 0;
+  margin-bottom: 15px;
+}
+.medias-mobile .each-work .card {
+  background: rgba(125,167,85,0);
+  transition: all 1.2s;
+  -webkit-transition: all 1.2s;
+  -o-transition: all 1.2s;
+}
+.medias-mobile .each-work .qr-code {
+  transition: all 1.2s;
+  -webkit-transition: all 1.2s;
+  -o-transition: all 1.2s;
+}
+.medias-mobile .each-work:nth-of-type(2n) .card {background: rgba(88,175,246,0);}
+.medias-mobile .each-work:hover .card {background: rgba(125,167,85,.1);}
+.medias-mobile .each-work:hover .qr-code {opacity: 1;}
+.medias-mobile .each-work:nth-of-type(2n):hover .card {background: rgba(88,175,246,.1);}
+.medias-mobile .card{
+  position: relative;
+  min-height: 180px;
+  text-align: center;
+  padding: 20px 15px;
+  border: 1px solid #E4E4E4;
+  opacity: 1;
+  filter: alpha(opacity=1);
+}
+
+.medias-mobile .theme {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 90px;
+  color: #7da755;
+  margin-bottom: 4px;
+  letter-spacing: .05px;
+  line-height: 88px;
+  -webkit-transition: font-size .2s;
+  -o-transition: font-size .2s;
+  transition: font-size .2s;
+}
+
+.medias-mobile .desc {font-size: 18px;color: #35b558;}
+.medias-mobile .each-work:nth-of-type(2n) .desc, .medias-mobile .each-work:nth-of-type(2n) .theme {
+  color: #58aff6;
+}
+
+
+.medias-mobile .line {
+  position: absolute;
+  display: inline-block;
+  background: #35b558;
+  transition: all 1.2s;
+  -webkit-transition: all 1.2s;
+  -o-transition: all 1.2s;
+  opacity: 0;
+}
+.medias-mobile .each-work:nth-of-type(2n) .line {background: #58aff6;}
+.medias-mobile .top-line {top: 0px;left: 0px; width:0; height: 1px;}
+.medias-mobile .right-line {bottom: 0px;right: 0px; width: 1px; height: 0;}
+.medias-mobile .bottom-line {bottom: 0;right: 0; width: 0;height: 1px;}
+.medias-mobile .left-line {left: 0;top: 0;height: 0;width: 1px;}
+.medias-mobile .each-work:hover .theme {font-size: 110px; }
+.medias-mobile .each-work:hover .line {opacity: 1;}
+.medias-mobile .each-work:hover .top-line {width: 100%;}
+.medias-mobile .each-work:hover .right-line {height: 100%;}
+.medias-mobile .each-work:hover .bottom-line {width: 100%;}
+.medias-mobile .each-work:hover .left-line {height: 100%;}
+
+.medias-mobile .each-work .qr-code {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left:-67px;
+  margin-top:-67px;
+  opacity: 0;
+}
+.medias-mobile .each-work .qr-code img{max-width: 135px;max-height: 135px;}
+
+@media screen and (max-width: 768px) {
+  .medias-mobile .each-work .qr-code {display: none;}
+}
