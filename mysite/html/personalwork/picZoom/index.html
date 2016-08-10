@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../../../logo.ico" type="image/x-icon">
+  <link rel="short icon" href="../../../../logo.ico" type="image/x-icon">
+  <link rel="bookmark" href="../../../../logo.ico" type="image/x-icon">
+  <title>Raganya Young</title>
+  <link rel="stylesheet" href="../../../css/base/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../css/base/common.css">
+  <link rel="stylesheet" href="../../../css/pages/header.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header class="navbar navbar-static-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle js-navbar-collapse collapsed" data-toggle="collapse" 
+          data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+          <span class="sr-only">切换导航</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="../../../../index.html" class="navbar-brand c-blue">
+          <img src="../../../images/logo.png" height="25" width="88" alt="logo raganya">
+        </a>
+      </div>
+      <nav id="bs-navbar" class="collapse navbar-collapse" aria-expanded="false">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="../../../../index.html">首页</a>
+          </li>
+          <li>
+            <a href="#">简历</a>
+          </li>
+          <li>
+            <a href="../../../html/personalwork/medias.html" class="active">组件</a>
+          </li>
+          <li>
+            <a href="#">作品</a>
+          </li>
+          <li>
+            <a href="#">博客</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="hidden-xs">
+            <span class="top-middle f12">试着用手机访问看看呢，缩小浏览器也可以~~</span>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container-fluid">
+    <div class="container mt25">
+      <div class="text-center">
+        <h2 class="f26 d-ib mr10">图片放大镜</h2>
+        <a href="../medias.html" class="td-line f18 go-back"><span class="f-as">Go Back</span></a>
+      </div>
+
+      <div class="tb-pic mt30">
+        <a href="javascrip:void(0);" id="midImg">
+          <img src="images/01_mid.jpg" alt="beauty" rel="images/01.jpg" class="jqzoom" />
+          <div class="mask" id="mask"></div>
+        </a>
+      </div>
+      <div>
+        <ul class="pic-list" id="thumbList">
+          <li class="active"><a href="#">
+            <img src="images/01_small.jpg" mid="images/01_mid.jpg" big="images/01.jpg">
+          </a></li>
+          <li><a href="#">
+            <img src="images/02_small.jpg" mid="images/02_mid.jpg" big="images/02.jpg">
+          </a></li>
+          <li><a href="#">
+            <img src="images/03_small.jpg" mid="images/03_mid.jpg" big="images/03.jpg">
+          </a></li>
+          <li><a href="#">
+            <img src="images/04_small.jpg" mid="images/04_mid.jpg" big="images/04.jpg">
+          </a></li>
+          <li><a href="#">
+            <img src="images/05_small.jpg" mid="images/05_mid.jpg" big="images/05.jpg">
+          </a></li>
+        </ul>
+      </div>
+
+      <div id="target" class="target">
+        <img src="images/01.jpg" class="workImg">
+      </div>
+    </div> 
+  </section>
+
+  <script src="js/jquery.js"></script>
+  <script src="../../../js/base/bootstrap.min.js"></script>
+  <script src="../../../js/pages/header.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#thumbList li img').click(function(e) {
+        var midsrc = e.target.getAttribute('mid')
+        var bigsrc = e.target.getAttribute('big')
+        var target = document.getElementsByClassName('jqzoom')[0]
+        target.setAttribute('src', midsrc)
+        target.setAttribute('rel', bigsrc)
+        document.getElementsByClassName('workImg')[0].setAttribute('src', bigsrc)
+      })
+
+        var midImg = document.getElementById('midImg')
+        var mask = document.getElementById('mask')
+        var target = document.getElementById('target')
+        var bigImg = target.children[0]
+
+        //鼠标移入，遮罩层显示，大图显示区显示
+        midImg.onmouseenter = function() {
+          mask.style.display = target.style.display = 'block';
+        }
+        //鼠标移出，遮罩层隐藏，大图显示区隐藏
+        midImg.onmouseleave = function() {
+          mask.style.display = target.style.display = 'none';
+        }
+        //鼠标移动，遮罩层跟随鼠标，大图显示相关内容
+        //鼠标在遮罩层中居中显示，鼠标的位置-显示区到body的距离-遮罩层的一半
+        //后面是赋值给遮罩层的距离，所以用到减，鼠标位置不变，是遮罩层在变，所以需要用到减,遮罩层往回挪
+        midImg.onmousemove = function(ev) {
+          var ev = ev || window.event
+          var scrollX = document.documentElement.scrollLeft || document.body.scrollLeft;
+          var scrollY = document.documentElement.scrollTop || document.body.scrollTop;
+          var x = ev.pageX || ev.clientX + scrollX;
+          var y = ev.pageY || ev.clientY + scrollY;
+
+          var left = x - this.offsetLeft - mask.offsetWidth/2;
+          var top = y - this.offsetTop - mask.offsetHeight/2;
+          var maxLeft = this.clientWidth - mask.offsetWidth;
+          var maxTop = this.clientHeight - mask.offsetHeight;
+          
+          if (left < 0) {
+            left = 0
+          } else if (left > maxLeft) {
+            left = maxLeft
+          }
+          if (top < 0) {
+            top = 0
+          } else if (top > maxTop) {
+            top = maxTop
+          }
+
+          var perX = left/(this.clientWidth - mask.offsetWidth)
+          var perY = top/(this.clientHeight - mask.offsetHeight)
+ 
+          mask.style.left = left + 'px'
+          mask.style.top = top + 'px'
+          bigImg.style.left = -perX*(bigImg.offsetWidth - target.clientWidth) + 'px'
+          bigImg.style.top = -perY*(bigImg.offsetHeight - target.clientHeight) + 'px'
+        }
+
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../../logo.ico" type="image/x-icon">
+  <link rel="short icon" href="../../../logo.ico" type="image/x-icon">
+  <link rel="bookmark" href="../../../logo.ico" type="image/x-icon">
+  <title>Raganya Young</title>
+  <link rel="stylesheet" href="../../css/base/bootstrap.min.css">
+  <link rel="stylesheet" href="../../css/base/common.css">
+  <link rel="stylesheet" href="../../css/plugin/jquery.fullPage.css">
+  <link rel="stylesheet" href="../../css/pages/fullpage/fullpage.css">
+</head>
+<body>
+  <section id="fullPage">
+    <div class="section section0" id="section0" data-anchor="page1">
+      <div class="wrap text-center">
+        <div class="section0-text"></div>
+        <div class="section0-text1"></div>
+        <div class="desc">
+          <p class="f-as">era of fourteen sick <span style="color: yellow">2.0</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="section section1" id="section1" data-anchor="page2">
+      <div class="wrap text-center">
+        <div class="section1-text"></div>
+        <div class="section1-text1"></div>
+        <div class="section1-text2"></div>
+        <div class="desc">
+          <p class="f-as" style="color: #999">era of fourteen sick <span style="color: #fff">2.0</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="section section2" id="section2" data-anchor="page3">
+      <div class="wrap text-center">
+        <div class="section2-text1"></div>
+        <div class="section2-text2"></div>
+        <div class="section2-text3"></div>
+        <div class="desc">
+          <p class="f-as" style="color: #31b0e5">era of fourteen sick <span style="color: #999">2.0</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="section section3" id="section3" data-anchor="page4">
+      <div class="wrap text-center">
+        <div class="section3-text1"></div>
+        <div class="section3-text2"></div>
+        <div class="section3-text3"></div>
+        <div class="desc">
+          <p class="f-as" style="color: #8cef22">era of fourteen sick <span style="color: #fff">2.0</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="section section4" id="section4" data-anchor="page5">
+      <div class="wrap text-center">
+        <div class="section4-text1"></div>
+        <div class="desc">
+          <p class="f-as" style="color: #f1ce52">era of fourteen sick <span style="color: #faf5bb">2.0</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- <ul id="fp-nav">
+    <li data-menuanchor="page1"><a href="#firstPage">First Slide</a></li>
+    <li data-menuanchor="page2"><a href="#secondPage">Second Slide</a></li>
+    <li data-menuanchor="page3"><a href="#firstPage">First Slide</a></li>
+    <li data-menuanchor="page4"><a href="#secondPage">Second Slide</a></li>
+    <li data-menuanchor="page5"><a href="#firstPage">First Slide</a></li>
+  </ul> -->
+  <ul id="menu">
+    <li data-menuanchor="page1" class="active"><a href="#page1">第一屏</a></li>
+    <li data-menuanchor="page2"><a href="#page2">第二屏</a></li>
+    <li data-menuanchor="page3"><a href="#page3">第三屏</a></li>
+    <li data-menuanchor="page4"><a href="#page4">第四屏</a></li>
+    <li data-menuanchor="page5"><a href="#page5">第5屏</a></li>
+  </ul>
+  
+
+  <script src="../../js/base/jquery.min.js"></script>
+  <script src="../../js/plugin/jquery.ui.js"></script>
+  <script src="../../js/plugin/jquery.fullPage.min.js"></script>
+  <script>
+    $(document).ready(function() {
+
+      var browser={  
+        versions:function(){   
+          var u = navigator.userAgent, app = navigator.appVersion;   
+           return {//移动终端浏览器版本信息
+                trident: u.indexOf('Trident') > -1, //IE内核
+                presto: u.indexOf('Presto') > -1, //opera内核
+                webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+                iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器
+                iPad: u.indexOf('iPad') > -1, //是否iPad
+                webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+            };  
+         }(),  
+       language:(navigator.browserLanguage || navigator.language).toLowerCase()  
+      }
+
+      $('#fullPage').fullpage({
+        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage'],
+        menu: 'fp-nav',
+        navigation: true,
+        navigationPosition: 'right',
+        loopTop: false,
+        loopBottom: true,
+        onLeave: function(index, nextIndex, direction) {
+          if (nextIndex === 1 && index === 2) {
+            if(browser.versions.mobile || browser.versions.ios || browser.versions.android ||   
+              browser.versions.iPhone || browser.versions.iPad){  
+              $('.section0-text').animate({bottom: '14%', opacity: '1'}, 50)      
+            }else{
+              $('.section0-text').animate({bottom: '0', opacity: '1'}, 50)
+            }
+            $('.section0 .wrap .desc').animate({top: '24%', opacity: '1'}, 200)
+            $('.section0-text1').animate({bottom: '10%', opacity: '1'}, 100)
+
+            $('.section1-text').animate({left: '-38%', opacity: '0'}, 50)
+            $('.section1-text1').animate({right: '-39%', opacity: '0'}, 50)
+            $('.section1-text2').animate({bottom: '-60%', opacity: '0'}, 100)
+            $('.section1 .wrap .desc').animate({top: '0', opacity: '0'}, 200)
+
+          } else if (nextIndex === 3 && index === 2) {
+
+            $('.section2-text1').animate({bottom: '0', opacity: '1'}, 50)
+            $('.section2-text2').animate({bottom: '0', opacity: '1'}, 100)
+            $('.section2-text3').animate({bottom: '7%', opacity: '1'}, 200)
+
+            $('.section1-text').animate({left: '-38%', opacity: '0'}, 50)
+            $('.section1-text1').animate({right: '-39%', opacity: '0'}, 50)
+            $('.section1-text2').animate({bottom: '-60%', opacity: '0'}, 100)
+            $('.section1 .wrap .desc').animate({top: '0', opacity: '0'}, 50)
+
+            if(browser.versions.mobile || browser.versions.ios || browser.versions.android ||   
+              browser.versions.iPhone || browser.versions.iPad){  
+              $('.section2 .wrap .desc').animate({fontSize: '36px'}, 50)     
+            }else{
+              $('.section2 .wrap .desc').animate({fontSize: '46px'}, 50)
+            }
+
+          } else if (nextIndex ===2 && index === 1) {
+            $('.section0-text').animate({bottom: '-63%', opacity: '0'}, 50)
+            $('.section0-text1').animate({bottom: '-70%', opacity: '0'}, 100)
+            $('.section0 .wrap .desc').animate({top: '0', opacity: '0'}, 200)
+
+            $('.section1-text').animate({left: '-7%', opacity: '1'}, 50)
+            $('.section1-text1').animate({right: '-7%', opacity: '1'}, 50)
+            $('.section1 .wrap .desc').animate({top: '20%', opacity: '1'}, 200)
+
+            if(browser.versions.mobile || browser.versions.ios || browser.versions.android ||   
+              browser.versions.iPhone || browser.versions.iPad){  
+              $('.section1-text2').animate({bottom: '-2%', opacity: '1'}, 50)     
+            }else{
+              $('.section1-text2').animate({bottom: '8%', opacity: '1'}, 50)
+            }
+
+          } else if (nextIndex === 2 && index === 3) {
+            $('.section1-text').animate({left: '-7%', opacity: '1'}, 50)
+            $('.section1-text1').animate({right: '-7%', opacity: '1'}, 50)
+            $('.section1 .wrap .desc').animate({top: '20%', opacity: '1'}, 50)
+
+            $('.section2-text1').animate({bottom: '-80%', opacity: '0'}, 50)
+            $('.section2-text2').animate({bottom: '-80%', opacity: '0'}, 100)
+            $('.section2-text3').animate({bottom: '-90%', opacity: '0'}, 200)
+            $('.section2 .wrap .desc').animate({fontSize: '0px'}, 50)
+
+            if(browser.versions.mobile || browser.versions.ios || browser.versions.android ||   
+              browser.versions.iPhone || browser.versions.iPad){  
+              $('.section1-text2').animate({bottom: '-2%', opacity: '1'}, 50)     
+            }else{
+              $('.section1-text2').animate({bottom: '8%', opacity: '1'}, 50)
+            }
+          } else if (nextIndex === 3 && index === 4) {
+            $('.section2-text1').animate({bottom: '0%', opacity: '1'}, 50)
+            $('.section2-text2').animate({bottom: '0', opacity: '1'}, 100)
+            $('.section2-text3').animate({bottom: '7%', opacity: '1'}, 200)
+
+            $('.section3-text3').animate({bottom: '-26%', opacity: '0'}, 50)
+            $('.section3 .wrap .desc').animate({fontSize: '0px'}, 50)
+            if(browser.versions.mobile || browser.versions.ios || browser.versions.android ||   
+              browser.versions.iPhone || browser.versions.iPad){  
+              $('.section2 .wrap .desc').animate({fontSize: '36px'}, 50)
+            }else{
+              $('.section2 .wrap .desc').animate({fontSize: '46px'}, 50)
+            }
+
+          } else if (nextIndex === 4 && index === 3) {
+            $('.section2-text1').animate({bottom: '-80%', opacity: '0'}, 50)
+            $('.section2-text2').animate({bottom: '-80%', opacity: '0'}, 100)
+            $('.section2-text3').animate({bottom: '-90%', opacity: '0'}, 200)
+            $('.section2 .wrap .desc').animate({fontSize: '0px'}, 50)
+
+            if(browser.versions.mobile || browser.versions.ios || browser.versions.android ||   
+              browser.versions.iPhone || browser.versions.iPad){  
+              $('.section3-text3').animate({bottom: '-4%', opacity: '1'}, 50)
+              $('.section3 .wrap .desc').animate({fontSize: '36px'}, 50)
+            }else{
+              $('.section3-text3').animate({bottom: '26%', opacity: '1'}, 50)
+              $('.section3 .wrap .desc').animate({fontSize: '46px'}, 50)
+            }
+          } else if (nextIndex === 5 && index === 4) {
+            $('.section3-text3').animate({bottom: '-26%', opacity: '0'}, 50)
+            $('.section3 .wrap .desc').animate({fontSize: '0px'}, 50)
+
+            if(browser.versions.mobile || browser.versions.ios || browser.versions.android ||   
+              browser.versions.iPhone || browser.versions.iPad){  
+              $('.section4 .wrap .desc').animate({top: '17%', fontSize: '36px'}, 100)
+            }else{
+              $('.section4 .wrap .desc').animate({top: '17%', fontSize: '46px'}, 100)
+            }
+          } else if (nextIndex === 4 && index === 5) {
+            if(browser.versions.mobile || browser.versions.ios || browser.versions.android ||   
+              browser.versions.iPhone || browser.versions.iPad){  
+              $('.section3-text3').animate({bottom: '-4%', opacity: '1'}, 50)
+              $('.section3 .wrap .desc').animate({fontSize: '36px'}, 50)
+            }else{
+              $('.section3-text3').animate({bottom: '26%', opacity: '1'}, 50)
+              $('.section3 .wrap .desc').animate({fontSize: '46px'}, 50)
+            }
+            $('.section4 .wrap .desc').animate({bottom: '-90%', fontSize: '0px'}, 100)
+          } else if (nextIndex === 1 && index === 5) {
+            if(browser.versions.mobile || browser.versions.ios || browser.versions.android ||   
+              browser.versions.iPhone || browser.versions.iPad){  
+              $('.section0-text').animate({bottom: '14%', opacity: '1'}, 50)
+            }else{
+              $('.section0-text').animate({bottom: '0', opacity: '1'}, 50)
+            }
+            $('.section0 .wrap .desc').animate({top: '24%', opacity: '1'}, 200)
+            $('.section0-text1').animate({bottom: '10%', opacity: '1'}, 100)
+            $('.section4 .wrap .desc').animate({bottom: '-90%', fontSize: '0px'}, 100)
+          } else if (nextIndex === 5 && index === 1) {
+            $('.section0-text').animate({bottom: '-63%', opacity: '0'}, 50)
+            $('.section0-text1').animate({bottom: '-70%', opacity: '0'}, 100)
+            $('.section0 .wrap .desc').animate({top: '0', opacity: '0'}, 200)
+
+            if(browser.versions.mobile || browser.versions.ios || browser.versions.android ||   
+              browser.versions.iPhone || browser.versions.iPad){  
+              $('.section4 .wrap .desc').animate({top: '17%', fontSize: '36px'}, 100)
+            }else{
+              $('.section4 .wrap .desc').animate({top: '17%', fontSize: '46px'}, 100)
+            }
+
+          }
+
+        },
+        afterRender: function() {
+          $('.section0-text1').animate({bottom: '0', opacity: '1'}, 100)
+          if(browser.versions.mobile || browser.versions.ios || browser.versions.android ||   
+            browser.versions.iPhone || browser.versions.iPad){  
+            $('.section0-text').animate({bottom: '14%', opacity: '1'}, 50)
+            $('.section3-text3').animate({bottom: '-4%', opacity: '1'}, 50) 
+            $('.section2 .wrap .desc').animate({fontSize: '36px'}, 50)
+
+            $('.section3 .wrap .desc').animate({fontSize: '36px'}, 50)
+            $('.section4 .wrap .desc').animate({top: '17%', fontSize: '36px'}, 100)     
+          }else{
+            $('.section0-text').animate({bottom: '0', opacity: '1'}, 50)
+            $('.section3-text3').animate({bottom: '26%', opacity: '1'}, 50)
+
+            $('.section2 .wrap .desc').animate({fontSize: '46px'}, 50)
+
+            $('.section3 .wrap .desc').animate({fontSize: '46px'}, 50)
+            $('.section4 .wrap .desc').animate({top: '17%', fontSize: '46px'}, 100) 
+          }
+          $('.section0 .wrap .desc').animate({top: '24%', opacity: '1'}, 200)
+
+          $('.section1-text').animate({left: '-7%', opacity: '1'}, 50)
+          $('.section1-text1').animate({right: '-7%', opacity: '1'}, 50)
+          $('.section1-text2').animate({bottom: '8%', opacity: '1'}, 50)
+          $('.section1 .wrap .desc').animate({top: '20%', opacity: '1'}, 200)
+
+          $('.section2-text1').animate({bottom: '0', opacity: '1'}, 50)
+          $('.section2-text2').animate({bottom: '0', opacity: '1'}, 100)
+          $('.section2-text3').animate({bottom: '7%', opacity: '1'}, 200)
+        },
+
+      })
+
+         
+
+      
+    })
+  </script>
+</body>
+</html>

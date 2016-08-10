@@ -1,0 +1,41 @@
+@charset 'UTF-8';
+
+.title {color: #498ea5;}
+.da-thumbs {    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+.da-thumbs li {
+  float: left; 
+  margin-right: 10px; 
+  margin-bottom: 10px;
+  background: #cedede; 
+  padding: 8px;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.da-thumbs li a, .da-thumbs li a img {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.da-thumbs li a div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(75,75,75,0.7);
+}
+.da-thumbs li a div span {
+  display: block;
+  padding: 10px 0;
+  margin: 40px 20px 20px 20px;
+  font-weight: normal;
+  color: rgba(255,255,255,0.9);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.1), 0 -10px 0 rgba(255,255,255,0.3);
+}

@@ -1,0 +1,261 @@
+@charset 'UTF-8';
+
+#fullpage {height: 100%; position: relative;}
+
+/*右侧导航*/
+#fp-nav ul li a span, .fp-slidesNav ul li a span{background-color: #f4f4f4;width: 12px;height: 12px;}
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span{
+  background-color: #dddddd;
+  margin: -2px 0 0 -2px;
+}
+#fp-nav ul li:hover a span,
+.fp-slidesNav ul li:hover a span{
+    width: 12px;
+    height: 12px;
+    margin: -2px 0 0 -2px;
+}
+
+.section {
+  position: relative;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  overflow: hidden;
+}
+
+.section .desc {
+  font-size: 46px;
+  color: #fff;
+  transition: all 0.8s ease;
+  height: 70%;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 99999;
+}
+.section2 .wrap .desc, .section3 .wrap .desc {
+  top: 20%;
+  font-size: 0px;
+  opacity: 1;
+}
+.section4 .wrap .desc {
+  opacity: 1;
+  font-size: 0px;
+  bottom: -90%;
+}
+
+
+.wrap {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.section0 {
+  background: url(../../../images/fullpage/section0-main.jpg) no-repeat center center;
+}
+.section0-text {
+  background: url(../../../images/fullpage/section0-plane.png) no-repeat bottom center;
+  width: 100%;
+  height: 63%;
+  position: absolute;
+  bottom: -63%;
+  z-index: 99;
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+.section0-text1 {
+  background: url(../../../images/fullpage/section0-text.png) no-repeat top center;
+  width: 100%;
+  height: 70%;
+  position: absolute;
+  bottom: -70%;
+  z-index: 90;
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.section1 {background: url(../../../images/fullpage/section1-main.jpg) no-repeat center center;}
+.section1-text {
+  background: url(../../../images/fullpage/section1-text1.png) no-repeat center center;
+  z-index: 99;
+  width: 40%;
+  height: 30%;
+  position: absolute;
+  top: 44%;
+  left: -38%;
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+.section1-text1 {
+  background: url(../../../images/fullpage/section1-text2.png) no-repeat center center;
+  z-index: 999;
+  width: 40%;
+  height: 30%;
+  position: absolute;
+  top: 36%;
+  right: -39%;
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+.section1-text2 {
+  background: url(../../../images/fullpage/section1-text3.png) no-repeat center center;
+  width: 60%;
+  height: 63%;
+  position: absolute;
+  bottom: -20%;
+  opacity: 0;
+  left: 20%;
+  z-index: 1000;
+  transition: all 0.8s ease;
+}
+
+.section2 {background: url(../../../images/fullpage/section2-main.jpg) no-repeat center center;}
+.section2-text1 {
+  background: url(../../../images/fullpage/section2-text1.png) no-repeat center center;
+  width: 100%;
+  height: 96%;
+  position: absolute;
+  bottom: -80%;
+  z-index: 99;
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+.section2-text2{
+  background: url(../../../images/fullpage/section2-text3.png) no-repeat center center;
+  width: 100%;
+  height: 96%;
+  position: absolute;
+  bottom: -80%;
+  z-index: 100;
+  opacity: 0;
+  transition: all 1s ease;
+}
+.section2-text3{
+  background: url(../../../images/fullpage/section2-text2.png) no-repeat center center;
+  width: 100%;
+  height: 96%;
+  position: absolute;
+  bottom: -90%;
+  z-index: 101;
+  opacity: 0;
+  transition: all 1.2s ease;
+}
+
+.section3 {background: url(../../../images/fullpage/section7.jpg) no-repeat center center;}
+.section3-text1 {
+  background: url(../../../images/fullpage/bg74.png) no-repeat center center;
+  width: 100%;
+  height: 34%;
+  position: absolute;
+  bottom: 0%;
+  z-index: 100;
+  opacity: 1;
+  transition: all 0.8s ease;
+}
+.section3-text2 {
+  background: url(../../../images/fullpage/bg73.png) no-repeat center center;
+  width: 100%;
+  position: absolute;
+  z-index: 98;
+  opacity: 1;
+  transition: all 0.8s ease;
+  height: 70%;
+  bottom: 7%;
+  left: -15%;
+}
+.section3-text3 {
+  background: url(../../../images/fullpage/bg71.png) no-repeat center center;
+  width: 100%;
+  position: absolute;
+  z-index: 97;
+  opacity: 0;
+  transition: all 0.8s ease;
+  height: 60%;
+  bottom: -26%;
+  left: -15%;
+}
+
+.section4 {
+  background: url(../../../images/fullpage/section10.jpg) no-repeat center center;
+}
+.section4-text1 {
+  background: url(../../../images/fullpage/bg101.png) no-repeat center center;
+  width: 100%;
+  position: absolute;
+  z-index: 98;
+  opacity: 1;
+  transition: all 0.8s ease;
+  height: 100%;
+  bottom: 0%;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .section1, .section2, .section3, .section4{
+    background-size: 100% 100%; 
+  }
+  .section .wrap .desc {
+    font-size: 36px;
+  }
+  .section0-text {
+    background-size: 110%;
+    height: 40%;
+  }
+  .section0-text1 {
+    background-size: 90%;
+    height: 40%;
+  }
+  .section1-text {
+    background-size: 80%;
+    top: 60%;
+    left: -16%;
+  }
+  .section1-text1 {
+    background-size: 80%;
+    top: 60%;
+    right: -16%;
+  }
+  .section1-text2 {
+    background-size: 140%;
+    bottom: 0;
+  }
+  .section2-text1 {
+    background-size: 135%;
+    height: 54%;
+  }
+  .section2-text2 {
+    background-size: 110%;
+    height: 58%;
+  }
+  .section2-text3 {
+    background-size: 120%;
+    height: 49%;
+  }
+  .section3-text1 {
+    background-size: 288%;
+    height: 21%;
+  }
+  .section3-text2 { 
+    background-size: 61%;
+    height: 29%;
+    left: -43%;
+  }
+  .section3-text3 {
+    background-size: 96%;
+    bottom: -4%;
+  }
+  .section4-text1 {
+    background-size: 122%;
+    bottom: 24%;
+  }
+}
+
+
