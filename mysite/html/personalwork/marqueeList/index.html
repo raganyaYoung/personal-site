@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../../../logo.ico" type="image/x-icon">
+  <link rel="short icon" href="../../../../logo.ico" type="image/x-icon">
+  <link rel="bookmark" href="../../../../logo.ico" type="image/x-icon">
+  <title>Raganya Young</title>
+  <link rel="stylesheet" href="../../../css/base/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="../../../css/base/common.css" type="text/css">
+  <link rel="stylesheet" href="../../../css/pages/header.css" type="text/css">
+  <link rel="stylesheet" href="index.css" type="text/css">
+</head>
+<body>
+<header class="navbar navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle js-navbar-collapse collapsed" data-toggle="collapse"
+              data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+        <span class="sr-only">切换导航</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="../../../../index.html" class="navbar-brand c-blue">
+        <img src="../../../images/logo.png" height="25" width="88" alt="logo raganya">
+      </a>
+    </div>
+    <nav id="bs-navbar" class="collapse navbar-collapse" aria-expanded="false">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="../../../../index.html">首页</a>
+        </li>
+        <li>
+          <a href="#">简历</a>
+        </li>
+        <li>
+          <a href="../../../html/personalwork/medias.html" class="active">组件</a>
+        </li>
+        <li>
+          <a href="#">作品</a>
+        </li>
+        <li>
+          <a href="#">博客</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="hidden-xs">
+          <span class="top-middle f12">试着用手机访问看看呢，缩小浏览器也可以~~</span>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="container-fluid">
+  <div class="container mt20 text-center">
+    <div class="mb35">
+      <h2 class="f26 d-ib mr10 ssub-title f-as">marquee</h2>
+      <a href="../medias.html" class="td-line f18 go-back"><span class="f-as">Go Back</span></a>
+    </div>
+    
+    <div class="wrapUl mt30">
+      <ul class="marqueeUl">
+        <li>傅文佩你开门呐1</li>
+        <li>傅文佩你开门呐2</li>
+        <li>傅文佩你开门呐3</li>
+        <li>傅文佩你开门呐4</li>
+        <li>傅文佩你开门呐5</li>
+        <li>傅文佩你开门呐6</li>
+        <li>傅文佩你开门呐7</li>
+        <li>傅文佩你开门呐8</li>
+        <li>傅文佩你开门呐9</li>
+        <li>傅文佩你开门呐10</li>
+      </ul>
+    </div>
+    
+  </div>
+
+  <section class="aside-fn">
+    <a href="javascript:void(0)" class="arrow-top glyphicon glyphicon-plane" id="toTop"></a>
+    <div class="qr-wrap">
+      <a href="javascript:void(0)" class="qr-code glyphicon glyphicon-qrcode" id="qrCode"></a>
+      <div class="qr-big">
+        <img src="../../../images/qr-code.png" alt="二维码 github">
+      </div>
+    </div>
+  </section>
+
+  <script src="../../../js/base/jquery.min.js"></script>
+  <script src="../../../js/base/bootstrap.min.js"></script>
+  <script src="marquee.js"></script>
+  <script src="../../../js/pages/header.js"></script>
+  <script>
+    $(function() {
+      $('.wrapUl').marquee({
+        auto: true,
+        interval: 1350,
+        showNum: 5,
+        stepLen: 1,
+        type: 'vertical'
+      })
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+@charset 'UTF-8';
+
+.wrapUl {
+  background: #eee;
+  color: #333;
+  width: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.marqueeUl {
+  padding:0;
+}
+
+.marqueeUl li {
+  line-height: 25px;
+  height: 25px;
+}
