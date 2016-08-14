@@ -64,8 +64,9 @@
     -ms-transform: none;
     -o-transform: none;
     transform: none;
-    padding-bottom: 80px;
+    /*padding-bottom: 80px;*/
   }
+  .index-main .each-col {margin-bottom: 30px;}
   .index-main .title {font-size: 28px;}
   .index-main .sub-title {font-size: 18px;}
   .index-main .each-col .img{
@@ -73,6 +74,8 @@
     height: 80px;
   }
   .index-main .each-col .desc a{font-size: 16px;}
+  .row {margin-top: -76px;}
+  .index-main .each-col .desc {margin-top: 14px;}
 }
 
 @media screen and (max-width: 640px){

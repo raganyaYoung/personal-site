@@ -17,7 +17,6 @@
 
 #bs-navbar {background: #fff;}
 #bs-navbar .navbar-nav li a.active,#bs-navbar .navbar-nav li a:hover{color: #58aff6;}
-#bs-navbar .navbar-nav li:first-child  a.active{color: #5f6060;}
 
 button.navbar-toggle{
   -webkit-transition: all 0.8s;

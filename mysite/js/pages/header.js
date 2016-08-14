@@ -8,6 +8,11 @@ $(function() {
   header.h.getScrollTop()
   header.h.scrollTop()
   header.h.windowScroll()
+
+  // $('.nav li').click(function() {
+  //   $(this).siblings().find('a').removeClass('active');
+  //   $(this).find('a').addClass('active')
+  // })
 })
 
 var header = (function (h) {

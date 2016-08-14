@@ -56,65 +56,39 @@
 </header>
 
 <div class="container-fluid">
-  <div class="container mt10 text-center">
-    <div class="mb10">
-      <h2 class="f26 d-ib mr10 ssub-title f-as">pc banner slide</h2>
+  <div class="container mt20">
+    <div class="mb35 text-center">
+      <h2 class="f26 d-ib mr10 ssub-title">立方体3d旋转</h2>
       <a href="../medias.html" class="td-line f18 go-back"><span class="f-as">Go Back</span></a>
     </div>
     
-    <div class="facus-banner" id="banner">
-      <ul class="banner-list">
-        <li><a href="javascript:;" class="banner-img" style="background: url(images/111.jpg) no-repeat center center"></a></li>
-        <li><a href="javascript:;" class="banner-img" style="background: url(images/222.jpg) no-repeat center center"></a></li>
-        <li><a href="javascript:;" class="banner-img" style="background: url(images/333.jpg) no-repeat center center"></a></li>
-        <li><a href="javascript:;" class="banner-img" style="background: url(images/444.jpg) no-repeat center center"></a></li>
-        <li><a href="javascript:;" class="banner-img" style="background: url(images/555.jpg) no-repeat center center"></a></li>
-      </ul>
-      <div class="img-num">
-        <span class="onselect">1</span>
-        <span>2</span>
-        <span>3</span>
-        <span>4</span>
-        <span>5</span>
+    <div class="rect-wrap">
+      <div class="wrapper text-center">
+        <div class="top slide"></div>
+        <div class="bottom slide"></div>
+        <div class="left slide"></div>
+        <div class="right slide"></div>
+        <div class="front slide"></div>
+        <div class="back slide"></div>
       </div>
     </div>
-
+    
   </div>
+
+
+
+  <section class="aside-fn">
+    <a href="javascript:void(0)" class="arrow-top glyphicon glyphicon-plane" id="toTop"></a>
+    <div class="qr-wrap">
+      <a href="javascript:void(0)" class="qr-code glyphicon glyphicon-qrcode" id="qrCode"></a>
+      <div class="qr-big">
+        <img src="../../../images/qr-code.png" alt="二维码 github">
+      </div>
+    </div>
+  </section>
 
   <script src="../../../js/base/jquery.min.js"></script>
   <script src="../../../js/base/bootstrap.min.js"></script>
   <script src="../../../js/pages/header.js"></script>
-  <script src="index.js"></script>
-  <script>
-    var index = 1;
-    var timer = null;
-    $(function() {
-      showImg(index);
-      $('.img-num span').hover(function() {
-        clearTimeout(timer)
-        var icon = parseInt($(this).text());
-        $('.img-num span').removeClass('onselect').eq(icon-1).addClass('onselect');
-        $('.banner-list li').hide().stop(true, true).eq(icon-1).fadeIn('show');
-      }, function() {
-        index = parseInt($(this).text());
-        showImg(index);
-      });
-
-    })
-
-    function showImg(num) {
-      var index = num;
-      $('.banner-list li').hide().stop(true, true).eq(index-1).fadeIn('show');
-      $('.img-num span').removeClass('onselect').eq(index-1).addClass('onselect')
-      index = index + 1 > 5 ? 1 : index + 1;
-      timer = setTimeout('showImg(' + index + ')', 2000)
-    }
-
-
-
-
-
-
-  </script>
 </body>
 </html>
