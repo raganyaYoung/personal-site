@@ -34,6 +34,7 @@ button.navbar-toggle.open{
   #bs-navbar .navbar-nav li:first-child  a.active{color: #58aff6;}
   .total-wrap{position: absolute;top: 35px;width: 100%;}
   .total-wrap .title {font-size: 20px;}
+  .navbar-toggle {margin-right:4px;}
 }
 
 .aside-fn {position: fixed; bottom: 50px;right: 40px;background: #fff;z-index: 999;}
