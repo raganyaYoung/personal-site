@@ -3,6 +3,8 @@ My personal site used bootstrap and jQuery. It is all about telling my unique st
 
 [个站地址](https://raganyayoung.github.io/personal-site/)
 
+[个站地址](https://raganyayoung.github.io/personal-site/)
+
 ##  Example
 ![personal site] (mysite/images/view.jpg)
 
