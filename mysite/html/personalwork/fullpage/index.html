@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport"
+    content="width=device-width,
+    initial-scale=1,
+    minimum-scale=1.0,
+    maximum-scale=1.0,
+    user-scalable=no">
+  <link rel="icon" href="../../../../logo.ico" type="image/x-icon">
+  <link rel="short icon" href="../../../../logo.ico" type="image/x-icon">
+  <link rel="bookmark" href="../../../../logo.ico" type="image/x-icon">
+  <title>Raganya Young</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/jquery.fullPage.css">
+  <link rel="stylesheet" href="css/fullpage.css">
+</head>
+<body>
+  <section id="fullPage">
+    <div class="section section0" id="section0" data-anchor="page1">
+      <div class="wrap text-center">
+        <div class="section0-title"></div>
+        <div class="section0-star1"></div>
+        <div class="section0-star2"></div>
+        <div class="section0-star3"></div>
+        <div class="section0-penguin1"></div>
+        <div class="section0-penguin2"></div>
+        <div class="section0-penguin3"></div>
+      </div>
+    </div>
+    <div class="section section1" id="section1" data-anchor="page2">
+      <div class="wrap text-center">
+        <div class="section1-title"></div>
+        <div class="section1-desc">
+          <div class="section1-penguin1"></div>
+          <div class="section1-penguin2"></div>
+          <div class="section1-penguin3"></div>
+          <div class="flag"></div>
+        </div>
+      </div>
+    </div>
+    <div class="section section2" id="section2" data-anchor="page3">
+      <div class="wrap text-center">
+        <div class="section2-desc">
+          <div class="seal"></div>
+        </div>
+      </div>
+    </div>
+    <div class="section section3" id="section3" data-anchor="page4">
+      <div class="wrap text-center">
+        <div class="section3-title">
+          <div class="section3-thank"></div>
+        </div>
+        <div class="section3-star1"></div>
+        <div class="section3-star2"></div>
+        <div class="section3-star3"></div>
+        <div class="section3-penguin"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <ul id="fp-nav">
+    <li data-menuanchor="page1"><a href="#firstPage">First Slide</a></li>
+    <li data-menuanchor="page2"><a href="#secondPage">Second Slide</a></li>
+    <li data-menuanchor="page3"><a href="#firstPage">First Slide</a></li>
+    <li data-menuanchor="page4"><a href="#secondPage">Second Slide</a></li>
+    <li data-menuanchor="page5"><a href="#firstPage">First Slide</a></li>
+  </ul> -->
+  <ul id="menu">
+    <li data-menuanchor="page1" class="active"><a href="#page1">第一屏</a></li>
+    <li data-menuanchor="page2"><a href="#page2">第二屏</a></li>
+    <li data-menuanchor="page3"><a href="#page3">第三屏</a></li>
+    <li data-menuanchor="page4"><a href="#page4">第四屏</a></li>
+  </ul>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.ui.js"></script>
+  <script src="js/jquery.fullPage.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      setInterval(function(){
+        $(".section0-star1").fadeOut(1800).fadeIn(800);
+        $(".section0-star2").fadeOut(2000).fadeIn(1000);
+        $(".section3-star1").fadeOut(1800).fadeIn(800);
+        // $(".section3-star2").fadeOut(1900).fadeIn(900);
+        $(".section3-star3").fadeOut(2000).fadeIn(1000);
+      },2000);
+      setInterval(function() {
+        $(".section0-penguin1").animate({ left: "7%" }, 500)
+          .animate({ left: "8%" }, 500);
+        $(".section0-penguin2").animate({ bottom: "18%" }, 500)
+          .animate({ bottom: "20%" }, 1000);
+        $(".section0-penguin3").animate({ bottom: "28%" }, 500)
+          .animate({ bottom: "29%" }, 500);
+        $(".section1-penguin1").animate({ top: "13%" }, 500)
+          .animate({ top: "12%" }, 500);
+        $(".section1-penguin2").animate({ left: "21%" }, 500)
+          .animate({ left: "23%" }, 800);
+        $(".section1-penguin3").animate({ bottom: "22%" }, 500)
+          .animate({ bottom: "23%" }, 1000);
+      })
+
+      var browser={
+        versions:function(){
+          var u = navigator.userAgent, app = navigator.appVersion;
+           return {//移动终端浏览器版本信息
+                trident: u.indexOf('Trident') > -1, //IE内核
+                presto: u.indexOf('Presto') > -1, //opera内核
+                webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+                iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器
+                iPad: u.indexOf('iPad') > -1, //是否iPad
+                webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+            };
+         }(),
+       language:(navigator.browserLanguage || navigator.language).toLowerCase()
+      }
+      $('#fullPage').fullpage({
+        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage'],
+        menu: 'fp-nav',
+        // navigation: true,
+        navigationPosition: 'right',
+        loopTop: false,
+        loopBottom: true,
+        onLeave: function(index, nextIndex, direction) {
+          if (nextIndex === 1 && index === 2) {
+            $('.section0-title').animate({opacity: '1'}, 500)
+            $('.section1-title').animate({opacity: '0'}, 500)
+            $('.section1-desc').animate({opacity: '0'}, 500)
+          } else if (nextIndex ===2 && index === 1) {
+            $('.section0-title').animate({opacity: '0'}, 500)
+            $('.section1-title').animate({opacity: '1'}, 500)
+            $('.section1-desc').animate({opacity: '1'}, 500)
+          } else if (nextIndex === 3 && index === 2) {
+            $('.section1-title').animate({opacity: '0'}, 500)
+            $('.seal').animate({opacity: '1', bottom: '78%', right: '12%'}, 500)
+          } else if (index === 3 && nextIndex === 2) {
+            $('.section1-title').animate({opacity: '1'}, 500)
+            $('.seal').animate({opacity: '0', bottom: '-48%', right: '-42%'}, 500)
+          } else if (nextIndex === 2 && index === 3) {
+            $('.section1-title').animate({opacity: '1'}, 500)
+
+            $('.seal').animate({opacity: '0', bottom: '-48%', right: '-42%'}, 500)
+          } else if (nextIndex === 3 && index === 4) {
+            $('.seal').animate({opacity: '1', bottom: '78%', right: '12%'}, 500)
+            $('.section3-thank').animate({opacity: '0', top: '-54%'}, 500)
+          } else if (nextIndex === 4 && index === 3) {
+            $('.seal').animate({opacity: '0', bottom: '-48%', right: '-42%'}, 500)
+            $('.section3-thank').animate({opacity: '1', top: '54%'}, 500)
+          } else if (nextIndex === 1 && index === 4) {
+            $('.section0-title').animate({opacity: '1'}, 500)
+            $('.section3-thank').animate({opacity: '0', top: '-54%'}, 500)
+          }
+        },
+        afterRender: function() {
+          $('.section1-title').animate({opacity: '1'}, 100)
+          $('.section3-thank').animate({opacity: '1'}, 500)
+        },
+      })
+
+
+    })
+  </script>
+</body>
+</html>
