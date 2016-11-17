@@ -91,26 +91,26 @@
   <script>
     $(document).ready(function() {
       setInterval(function(){
-        $(".section0-star1").fadeOut(1800).fadeIn(800);
-        $(".section0-star2").fadeOut(2000).fadeIn(1000);
-        $(".section3-star1").fadeOut(1000).fadeIn(800);
-        $(".section0-penguin2 .star1").fadeOut(1800).fadeIn(600)
-        $(".section0-penguin2 .star2").fadeOut(600).fadeIn(600)
-        $(".section3-penguin2 .star1").fadeOut(1800).fadeIn(600)
-        $(".section3-penguin2 .star2").fadeOut(600).fadeIn(600)
-        $(".section3-star3").fadeOut(2000).fadeIn(1000);
+        // $(".section0-star1").fadeOut(1800).fadeIn(800);
+        // $(".section0-star2").fadeOut(2000).fadeIn(1000);
+        // $(".section3-star1").fadeOut(1000).fadeIn(800);
+        // $(".section0-penguin2 .star1").fadeOut(1800).fadeIn(600)
+        // $(".section0-penguin2 .star2").fadeOut(600).fadeIn(600)
+        // $(".section3-penguin2 .star1").fadeOut(1800).fadeIn(600)
+        // $(".section3-penguin2 .star2").fadeOut(600).fadeIn(600)
+        // $(".section3-star3").fadeOut(2000).fadeIn(1000);
       },2000);
       setInterval(function() {
-        $(".section0-penguin1").animate({ left: "7%" }, 500)
-          .animate({ left: "8%" }, 500);
-        $(".section0-penguin3").animate({ bottom: "29%" }, 500)
-          .animate({ bottom: "30%" }, 500);
-        $(".section1-penguin1").animate({ top: "18%" }, 500)
-          .animate({ top: "17%" }, 500);
-        $(".section1-penguin2").animate({ left: "36%" }, 500)
-          .animate({ left: "37%" }, 800);
-        $(".section1-penguin3").animate({ bottom: "26%" }, 500)
-          .animate({ bottom: "27%" }, 1000);
+        // $(".section0-penguin1").animate({ left: "7%" }, 500)
+        //   .animate({ left: "8%" }, 500);
+        // $(".section0-penguin3").animate({ bottom: "29%" }, 500)
+        //   .animate({ bottom: "30%" }, 500);
+        // $(".section1-penguin1").animate({ top: "18%" }, 500)
+        //   .animate({ top: "17%" }, 500);
+        // $(".section1-penguin2").animate({ left: "36%" }, 500)
+        //   .animate({ left: "37%" }, 800);
+        // $(".section1-penguin3").animate({ bottom: "26%" }, 500)
+        //   .animate({ bottom: "27%" }, 1000);
       })
 
       var browser={
@@ -159,13 +159,13 @@
             $('.seal').animate({opacity: '0', right: '24%'}, 500)
           } else if (nextIndex === 3 && index === 4) {
             $('.seal').animate({opacity: '1', right: '24%'}, 500)
-            $('.section3-thank').animate({opacity: '0', top: '-27%'}, 500)
+            // $('.section3-thank').animate({opacity: '0', top: '-27%'}, 500)
           } else if (nextIndex === 4 && index === 3) {
             $('.seal').animate({opacity: '0', right: '-24%'}, 500)
-            $('.section3-thank').animate({opacity: '1', top: '27%'}, 500)
+            // $('.section3-thank').animate({opacity: '1', top: '27%'}, 500)
           } else if (nextIndex === 1 && index === 4) {
             $('.section0-title').animate({opacity: '1', top: '5%'}, 500)
-            $('.section3-thank').animate({opacity: '0', top: '-27%'}, 500)
+            // $('.section3-thank').animate({opacity: '0', top: '-27%'}, 500)
           }
         },
         afterRender: function() {

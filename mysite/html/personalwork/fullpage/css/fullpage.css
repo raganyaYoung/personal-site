@@ -203,7 +203,7 @@
   width: 27%;
   height: 24%;
   position: absolute;
-  top: 60%;
+  top: 70%;
   right: 24%;
 }
 
@@ -219,7 +219,7 @@
   position: absolute;
   left: 5%;
   top: 2%;
-  z-index: 2;
+  z-index: 4;
 }
 .section3-thank {
   background: url(../images/p4-thank.png) no-repeat;
@@ -227,10 +227,10 @@
   width: 50%;
   height: 16%;
   position: absolute;
-  top: 27%;
+  top: 30%;
   left: 27%;
   opacity: 0;
-  z-index: 4;
+  z-index: 5;
 }
 .section3-star1 {
   background: url(../images/p4-star1.png) no-repeat;
@@ -251,7 +251,7 @@
 }
 .section3-star3 {
   background: url(../images/p4-star3.png) no-repeat;
-  background-size: 100% auto;
+  background-size: 90% auto;
   width: 100%;
   height: 100%;
   position: absolute;
