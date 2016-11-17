@@ -36,12 +36,12 @@
 }
 .section0-title {
   background: url(../images/p1-title.png) no-repeat;
-  width: 90%;
+  width: 80%;
   height: 50%;
   background-size: 100% auto;
   position: absolute;
-  left: 5%;
-  top: 8%;
+  left: 10%;
+  top: 10%;
   z-index: 2;
   opacity: 1;
 }
@@ -75,18 +75,39 @@
   width: 24%;
   height: 20%;
   position: absolute;
-  bottom: 26%;
+  bottom: 30%;
   left: 7%;
+  z-index: 2;
 }
 .section0-penguin2 {
-  background: url(../images/penguin3.png) no-repeat;
+  background: url(../images/penguin-big.png) no-repeat;
   background-size: 100% auto;
-  width: 43%;
+  width: 37%;
   height: 26%;
   position: absolute;
-  bottom: 18%;
-  left: 28%;
+  bottom: 22%;
+  left: 34%;
   z-index: 2;
+}
+.section0-penguin2 .star1 {
+  background: url(../images/star1.png) no-repeat bottom left;
+  width: 67%;
+  height: 100%;
+  position: absolute;
+  left: -16%;
+  bottom: 9%;
+  z-index: 4;
+  background-size: cover;
+}
+.section0-penguin2 .star2 {
+  background: url(../images/star2.png) no-repeat bottom left;
+  width: 90%;
+  height: 33%;
+  position: absolute;
+  left: 4%;
+  top: -13%;
+  z-index: -3;
+  background-size: contain;
 }
 .section0-penguin3 {
   background: url(../images/penguin2.png) no-repeat;
@@ -94,8 +115,9 @@
   width: 32%;
   height: 20%;
   position: absolute;
-  bottom: 28%;
+  bottom: 32%;
   right: 2%;
+  z-index: 2;
 }
 
 .section1 {
@@ -103,9 +125,9 @@
 }
 .section1-desc {
   background: url(../images/p2-desc.png) no-repeat top center;
-  height: 100%;
+  height: 80%;
   width: 58%;
-  background-size: 100% auto;
+  background-size: 76% auto;
   position: absolute;
   top: 7%;
   left: 21%;
@@ -124,39 +146,39 @@
 }
 .section1-penguin1 {
   background: url(../images/p2-penguin1.png) no-repeat;
-  background-size: 100% auto;
+  background-size: 85% auto;
   width: 46%;
-  height: 14%;
+  height: 20%;
   position: absolute;
-  top: 13%;
-  left: 28%;
+  top: 11%;
+  left: 32%;
 }
 .section1-penguin2 {
   background: url(../images/p2-penguin2.png) no-repeat;
   background-size: 100% auto;
-  width: 52%;
-  height: 14%;
+  width: 47%;
+  height: 20%;
   position: absolute;
-  top: 39%;
+  top: 36%;
   left: 22%;
 }
 .flag {
   background: url(../images/flag.png) no-repeat;
   background-size: 100% auto;
-  width: 31%;
+  width: 27%;
   height: 16%;
   position: absolute;
-  bottom: 23%;
-  left: 28%;
+  bottom: 27%;
+  left: 33%;
 }
 .section1-penguin3 {
   background: url(../images/p2-penguin3.png) no-repeat;
   background-size: 100% auto;
-  width: 32%;
-  height: 14%;
+  width: 27%;
+  height: 16%;
   position: absolute;
-  bottom: 22%;
-  left: 38%;
+  bottom: 24%;
+  left: 44%;
 }
 
 .section2 {
@@ -164,20 +186,21 @@
 }
 .section2-desc {
   background: url(../images/p3-bg.png) no-repeat;
-  background-size: 100% auto;
+  background-size: 80% auto;
   width: 100%;
   height: 100%;
   position: absolute;
   top: -5%;
+  left: 10%;
 }
 .seal {
   background: url(../images/p3-seal.png) no-repeat;
   background-size: 100% auto;
-  width: 44%;
+  width: 27%;
   height: 100%;
   position: absolute;
-  top: 78%;
-  right: 12%;
+  top: 65%;
+  right: 34%;
 }
 
 .section3 {
@@ -191,7 +214,7 @@
   background-size: 100% auto;
   position: absolute;
   left: 5%;
-  top: 10%;
+  top: 4%;
   z-index: 2;
 }
 .section3-thank {
@@ -229,13 +252,33 @@
   position: absolute;
   z-index: 1;
 }
-.section3-penguin {
-  background: url(../images/p4-penguin.png) no-repeat;
+.section3-penguin2 {
+  background: url(../images/penguin-big.png) no-repeat;
   background-size: 100% auto;
-  width: 47%;
-  height: 29%;
+  width: 37%;
+  height: 26%;
   position: absolute;
-  bottom: 11%;
-  left: 27%;
+  bottom: 20%;
+  left: 34%;
   z-index: 2;
+}
+.section3-penguin2 .star1 {
+  background: url(../images/star1.png) no-repeat bottom left;
+  width: 67%;
+  height: 100%;
+  position: absolute;
+  left: -16%;
+  bottom: 9%;
+  z-index: 4;
+  background-size: cover;
+}
+.section3-penguin2 .star2 {
+  background: url(../images/star2.png) no-repeat bottom left;
+  width: 90%;
+  height: 33%;
+  position: absolute;
+  left: 4%;
+  top: -13%;
+  z-index: -3;
+  background-size: contain;
 }

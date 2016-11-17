@@ -27,7 +27,11 @@
         <div class="section0-star2"></div>
         <div class="section0-star3"></div>
         <div class="section0-penguin1"></div>
-        <div class="section0-penguin2"></div>
+        <div class="section0-penguin2">
+          <div class="star1"></div>
+          <div class="star2"></div>
+        </div>
+        <!-- <div class="section0-penguin2"></div> -->
         <div class="section0-penguin3"></div>
       </div>
     </div>
@@ -57,7 +61,11 @@
         <div class="section3-star1"></div>
         <div class="section3-star2"></div>
         <div class="section3-star3"></div>
-        <div class="section3-penguin"></div>
+
+        <div class="section3-penguin2">
+          <div class="star1"></div>
+          <div class="star2"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -85,23 +93,27 @@
       setInterval(function(){
         $(".section0-star1").fadeOut(1800).fadeIn(800);
         $(".section0-star2").fadeOut(2000).fadeIn(1000);
-        $(".section3-star1").fadeOut(1800).fadeIn(800);
+        $(".section3-star1").fadeOut(1000).fadeIn(800);
+
         // $(".section3-star2").fadeOut(1900).fadeIn(900);
+        $(".section0-penguin2 .star1").fadeOut(1800).fadeIn(600)
+        $(".section0-penguin2 .star2").fadeOut(600).fadeIn(600)
+        $(".section3-penguin2 .star1").fadeOut(1800).fadeIn(600)
+        $(".section3-penguin2 .star2").fadeOut(600).fadeIn(600)
+
         $(".section3-star3").fadeOut(2000).fadeIn(1000);
       },2000);
       setInterval(function() {
         $(".section0-penguin1").animate({ left: "7%" }, 500)
           .animate({ left: "8%" }, 500);
-        $(".section0-penguin2").animate({ bottom: "18%" }, 500)
-          .animate({ bottom: "20%" }, 1000);
-        $(".section0-penguin3").animate({ bottom: "28%" }, 500)
-          .animate({ bottom: "29%" }, 500);
-        $(".section1-penguin1").animate({ top: "13%" }, 500)
-          .animate({ top: "12%" }, 500);
-        $(".section1-penguin2").animate({ left: "21%" }, 500)
-          .animate({ left: "23%" }, 800);
-        $(".section1-penguin3").animate({ bottom: "22%" }, 500)
-          .animate({ bottom: "23%" }, 1000);
+        $(".section0-penguin3").animate({ bottom: "32%" }, 500)
+          .animate({ bottom: "33%" }, 500);
+        $(".section1-penguin1").animate({ top: "11%" }, 500)
+          .animate({ top: "10%" }, 500);
+        $(".section1-penguin2").animate({ left: "22%" }, 500)
+          .animate({ left: "24%" }, 800);
+        $(".section1-penguin3").animate({ bottom: "24%" }, 500)
+          .animate({ bottom: "25%" }, 1000);
       })
 
       var browser={
@@ -131,31 +143,31 @@
         loopBottom: true,
         onLeave: function(index, nextIndex, direction) {
           if (nextIndex === 1 && index === 2) {
-            $('.section0-title').animate({opacity: '1'}, 500)
+            $('.section0-title').animate({opacity: '1', top: '5%'}, 500)
             $('.section1-title').animate({opacity: '0'}, 500)
             $('.section1-desc').animate({opacity: '0'}, 500)
           } else if (nextIndex ===2 && index === 1) {
-            $('.section0-title').animate({opacity: '0'}, 500)
+            $('.section0-title').animate({opacity: '0', top: '-40%'}, 500)
             $('.section1-title').animate({opacity: '1'}, 500)
             $('.section1-desc').animate({opacity: '1'}, 500)
           } else if (nextIndex === 3 && index === 2) {
             $('.section1-title').animate({opacity: '0'}, 500)
-            $('.seal').animate({opacity: '1', bottom: '78%', right: '12%'}, 500)
+            $('.seal').animate({opacity: '1', bottom: '78%', right: '34%'}, 500)
           } else if (index === 3 && nextIndex === 2) {
             $('.section1-title').animate({opacity: '1'}, 500)
-            $('.seal').animate({opacity: '0', bottom: '-48%', right: '-42%'}, 500)
+            $('.seal').animate({opacity: '0', bottom: '-48%', right: '-34%'}, 500)
           } else if (nextIndex === 2 && index === 3) {
             $('.section1-title').animate({opacity: '1'}, 500)
 
-            $('.seal').animate({opacity: '0', bottom: '-48%', right: '-42%'}, 500)
+            $('.seal').animate({opacity: '0', bottom: '-48%', right: '34%'}, 500)
           } else if (nextIndex === 3 && index === 4) {
-            $('.seal').animate({opacity: '1', bottom: '78%', right: '12%'}, 500)
+            $('.seal').animate({opacity: '1', bottom: '78%', right: '34%'}, 500)
             $('.section3-thank').animate({opacity: '0', top: '-54%'}, 500)
           } else if (nextIndex === 4 && index === 3) {
-            $('.seal').animate({opacity: '0', bottom: '-48%', right: '-42%'}, 500)
+            $('.seal').animate({opacity: '0', bottom: '-48%', right: '-34%'}, 500)
             $('.section3-thank').animate({opacity: '1', top: '54%'}, 500)
           } else if (nextIndex === 1 && index === 4) {
-            $('.section0-title').animate({opacity: '1'}, 500)
+            $('.section0-title').animate({opacity: '1', top: '5%'}, 500)
             $('.section3-thank').animate({opacity: '0', top: '-54%'}, 500)
           }
         },
