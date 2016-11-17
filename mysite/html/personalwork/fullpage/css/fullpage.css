@@ -47,7 +47,7 @@
 }
 .section0-star1 {
   background: url(../images/p1-star1.png) no-repeat;
-  background-size: 100% auto;
+  background-size: 91% auto;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -83,9 +83,9 @@
   background: url(../images/penguin-big.png) no-repeat;
   background-size: 100% auto;
   width: 37%;
-  height: 26%;
+  height: 24%;
   position: absolute;
-  bottom: 22%;
+  bottom: 24%;
   left: 34%;
   z-index: 2;
 }
@@ -113,9 +113,9 @@
   background: url(../images/penguin2.png) no-repeat;
   background-size: 100% auto;
   width: 32%;
-  height: 20%;
+  height: 23%;
   position: absolute;
-  bottom: 32%;
+  bottom: 29%;
   right: 2%;
   z-index: 2;
 }
@@ -129,7 +129,7 @@
   width: 58%;
   background-size: 76% auto;
   position: absolute;
-  top: 7%;
+  top: 10%;
   left: 21%;
   z-index: 1;
 }
@@ -147,38 +147,42 @@
 .section1-penguin1 {
   background: url(../images/p2-penguin1.png) no-repeat;
   background-size: 85% auto;
-  width: 46%;
+  width: 29%;
   height: 20%;
   position: absolute;
-  top: 11%;
-  left: 32%;
+  top: 18%;
+  left: 38%;
+  z-index: 1;
 }
 .section1-penguin2 {
   background: url(../images/p2-penguin2.png) no-repeat;
   background-size: 100% auto;
-  width: 47%;
+  width: 26%;
   height: 20%;
   position: absolute;
-  top: 36%;
-  left: 22%;
+  top: 39%;
+  left: 36%;
+  z-index: 2;
 }
 .flag {
   background: url(../images/flag.png) no-repeat;
   background-size: 100% auto;
-  width: 27%;
+  width: 15%;
   height: 16%;
   position: absolute;
-  bottom: 27%;
-  left: 33%;
+  bottom: 28%;
+  left: 40%;
+  z-index: 2;
 }
 .section1-penguin3 {
   background: url(../images/p2-penguin3.png) no-repeat;
   background-size: 100% auto;
-  width: 27%;
+  width: 16%;
   height: 16%;
   position: absolute;
-  bottom: 24%;
+  bottom: 26%;
   left: 44%;
+  z-index: 3;
 }
 
 .section2 {
@@ -197,10 +201,10 @@
   background: url(../images/p3-seal.png) no-repeat;
   background-size: 100% auto;
   width: 27%;
-  height: 100%;
+  height: 24%;
   position: absolute;
-  top: 65%;
-  right: 34%;
+  top: 60%;
+  right: 24%;
 }
 
 .section3 {
@@ -211,21 +215,22 @@
   background: url(../images/p4-title.png) no-repeat top center;
   width: 90%;
   height: 50%;
-  background-size: 100% auto;
+  background-size: 93% auto;
   position: absolute;
   left: 5%;
-  top: 4%;
+  top: 2%;
   z-index: 2;
 }
 .section3-thank {
   background: url(../images/p4-thank.png) no-repeat;
-  background-size: 100% auto;
-  width: 52%;
-  height: 30%;
+  background-size: 90% auto;
+  width: 50%;
+  height: 16%;
   position: absolute;
-  top: 54%;
-  left: 24%;
+  top: 27%;
+  left: 27%;
   opacity: 0;
+  z-index: 4;
 }
 .section3-star1 {
   background: url(../images/p4-star1.png) no-repeat;
@@ -258,7 +263,7 @@
   width: 37%;
   height: 26%;
   position: absolute;
-  bottom: 20%;
+  bottom: 22%;
   left: 34%;
   z-index: 2;
 }

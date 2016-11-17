@@ -39,25 +39,25 @@
       <div class="wrap text-center">
         <div class="section1-title"></div>
         <div class="section1-desc">
+        </div>
           <div class="section1-penguin1"></div>
           <div class="section1-penguin2"></div>
           <div class="section1-penguin3"></div>
           <div class="flag"></div>
-        </div>
       </div>
     </div>
     <div class="section section2" id="section2" data-anchor="page3">
       <div class="wrap text-center">
         <div class="section2-desc">
-          <div class="seal"></div>
         </div>
+          <div class="seal"></div>
       </div>
     </div>
     <div class="section section3" id="section3" data-anchor="page4">
       <div class="wrap text-center">
         <div class="section3-title">
-          <div class="section3-thank"></div>
         </div>
+          <div class="section3-thank"></div>
         <div class="section3-star1"></div>
         <div class="section3-star2"></div>
         <div class="section3-star3"></div>
@@ -94,26 +94,23 @@
         $(".section0-star1").fadeOut(1800).fadeIn(800);
         $(".section0-star2").fadeOut(2000).fadeIn(1000);
         $(".section3-star1").fadeOut(1000).fadeIn(800);
-
-        // $(".section3-star2").fadeOut(1900).fadeIn(900);
         $(".section0-penguin2 .star1").fadeOut(1800).fadeIn(600)
         $(".section0-penguin2 .star2").fadeOut(600).fadeIn(600)
         $(".section3-penguin2 .star1").fadeOut(1800).fadeIn(600)
         $(".section3-penguin2 .star2").fadeOut(600).fadeIn(600)
-
         $(".section3-star3").fadeOut(2000).fadeIn(1000);
       },2000);
       setInterval(function() {
         $(".section0-penguin1").animate({ left: "7%" }, 500)
           .animate({ left: "8%" }, 500);
-        $(".section0-penguin3").animate({ bottom: "32%" }, 500)
-          .animate({ bottom: "33%" }, 500);
-        $(".section1-penguin1").animate({ top: "11%" }, 500)
-          .animate({ top: "10%" }, 500);
-        $(".section1-penguin2").animate({ left: "22%" }, 500)
-          .animate({ left: "24%" }, 800);
-        $(".section1-penguin3").animate({ bottom: "24%" }, 500)
-          .animate({ bottom: "25%" }, 1000);
+        $(".section0-penguin3").animate({ bottom: "29%" }, 500)
+          .animate({ bottom: "30%" }, 500);
+        $(".section1-penguin1").animate({ top: "18%" }, 500)
+          .animate({ top: "17%" }, 500);
+        $(".section1-penguin2").animate({ left: "36%" }, 500)
+          .animate({ left: "37%" }, 800);
+        $(".section1-penguin3").animate({ bottom: "26%" }, 500)
+          .animate({ bottom: "27%" }, 1000);
       })
 
       var browser={
@@ -152,23 +149,23 @@
             $('.section1-desc').animate({opacity: '1'}, 500)
           } else if (nextIndex === 3 && index === 2) {
             $('.section1-title').animate({opacity: '0'}, 500)
-            $('.seal').animate({opacity: '1', bottom: '78%', right: '34%'}, 500)
+            $('.seal').animate({opacity: '1', right: '24%'}, 500)
           } else if (index === 3 && nextIndex === 2) {
             $('.section1-title').animate({opacity: '1'}, 500)
-            $('.seal').animate({opacity: '0', bottom: '-48%', right: '-34%'}, 500)
+            $('.seal').animate({opacity: '0', right: '-24%'}, 500)
           } else if (nextIndex === 2 && index === 3) {
             $('.section1-title').animate({opacity: '1'}, 500)
 
-            $('.seal').animate({opacity: '0', bottom: '-48%', right: '34%'}, 500)
+            $('.seal').animate({opacity: '0', right: '24%'}, 500)
           } else if (nextIndex === 3 && index === 4) {
-            $('.seal').animate({opacity: '1', bottom: '78%', right: '34%'}, 500)
-            $('.section3-thank').animate({opacity: '0', top: '-54%'}, 500)
+            $('.seal').animate({opacity: '1', right: '24%'}, 500)
+            $('.section3-thank').animate({opacity: '0', top: '-27%'}, 500)
           } else if (nextIndex === 4 && index === 3) {
-            $('.seal').animate({opacity: '0', bottom: '-48%', right: '-34%'}, 500)
-            $('.section3-thank').animate({opacity: '1', top: '54%'}, 500)
+            $('.seal').animate({opacity: '0', right: '-24%'}, 500)
+            $('.section3-thank').animate({opacity: '1', top: '27%'}, 500)
           } else if (nextIndex === 1 && index === 4) {
             $('.section0-title').animate({opacity: '1', top: '5%'}, 500)
-            $('.section3-thank').animate({opacity: '0', top: '-54%'}, 500)
+            $('.section3-thank').animate({opacity: '0', top: '-27%'}, 500)
           }
         },
         afterRender: function() {
